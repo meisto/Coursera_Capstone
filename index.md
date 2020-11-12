@@ -2,23 +2,30 @@
 ### <p align="center">The battle of neighborhoods</p>
 
 ## 1. Introduction
-This document represents the final assignment for the final course of the [IBM Data Science Projessional
+This document represents the final assignment for the final course of the [IBM Data Science Professional
 Certificate](https://www.coursera.org/professional-certificates/ibm-data-science"). In this series of courses we learned to understand and use various tools and techniques to find, process and learn from structured data. This final assignment is meant to test if we are now able to use these abilities to tackle real-world data science problems.
 
-The task for the final assignment was stated as follows: 
-"Come up with an idea to leverage the Foursquare location data to explore or compare neighborhoods or cities of your joice or come up with a problem that you can use the the Foursquare location data to solve."
+The task to solve for the final assignment was stated as follows: 
+_"Come up with an idea to leverage the Foursquare location data to explore or compare neighborhoods or cities of your choice or come up with a problem that you can use the the Foursquare location data to solve."_
 
 The sections of this document, with which I want to solve that task, are structured as follows:
-1. This introductary text.
+1. This introductory text.
 2. Description of the problem I want to tackle and a discussion of the background.
 3. A description and list of all the data sources I want to use and how it will enable me to solve the problem.
 5. Methodology
 6. Results.
 
+**Note:**
 If you are a peer reviewer and read this to review the assignment for week 4, please start from [here](#jump_point_week_5). If you want to review the assignment for week 5, please start from [here](#jump_point_week_6). If you are not a peer reviewer, simply go on.
 
 <a name="jump_point_week_5"></a>
 ## 3. Business Problem
+When regularly taking the train, one often has the problem of having some hours of spare time at train stations with nothing to do. For these people it can be very interesting to find out what they can do with that spare time.  
+In my suggested business problem I will try to leverage data to make suggestions on what one can do in the surrounding city in the given time.
+
+For this business problem I will make some assumptions: First, I am gonna assume that the stakeholder is in a foreign city without any knowledge on local venues. Secondly, I will assume that they got there by train, so they do not have a car at their disposal. Therefore I will assume they will take the train inside the city. Resulting from this is that the venues should be close to train stations, as to be easily reachable.
+
+This business model can be summarized as following. I will try to build clusters of venues centered on reachable train stations, find similar clusters and return for each type of cluster the one that is the most reachable.
 
 ## 4. Data Sources
 This is a list of all the data and how I want to use it to solve my problem. Note that many of the data sources are in German. I will add a short translation where necessary for your convenience.
