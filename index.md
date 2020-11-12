@@ -13,10 +13,13 @@ The description of this task goes as following:
 ## Description of the Problem:
 
 ## Data sources:
+This is a list of all the data and how I want to use it to solve my problem. Note that much of the data sources are in German. I will add a short translation for your convenience.
+* [VVS list of stops](https://www.openvvs.de/dataset/haltestellen/resource/d87d1f01-5c14-4d08-8452-e405a6472ab4) - A list of all stops in the VVS (Verkehrsverbund Stuttgart; responsible for public transport in the region of Stuttgart)
 
-## Notebook-Links:
+## Links to Notebooks: 
 
 ## Report:
+
 ### Intro:
 As given in the review criteria, this report will consist of the following components:
 1. An introduction to the problem and who could be interested in such a project.
