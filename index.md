@@ -1,5 +1,5 @@
 # <p align="center">Capstone Project</p>
-### <p align="center>The battle of neighborhoods</p>
+### <p align="center">The battle of neighborhoods</p>
 
 ## 1. Task:
 The task for the final assignment was stated as follows: 
