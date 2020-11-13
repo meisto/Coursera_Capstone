@@ -25,20 +25,20 @@ In my suggested business problem I will try to leverage data to make suggestions
 
 For this business problem I will make some assumptions: First, I am gonna assume that the stakeholder is in a foreign city without any knowledge on local venues. Secondly, I will assume that they got there by train, so they do not have a car or other type of private transport at their disposal and have to rely on local train and bus connections. Resulting from this is the need for relative closeness of avenues to train and bus stations, as to be easily reachable.
 
-This business model can be summarized as following: I will try to build clusters of venues centered on reachable train stations, find similar clusters and return for each type of cluster the most prominsing candidates.
+This business model can be summarized as following: I will try to build clusters of venues centered on reachable train stations, find similar clusters and return for each type of cluster the most promising candidates.
 
 ## 4. Data Sources
-This is a list of all the data and how I want to use it to solve my problem. For the example in this document I have choosen to use data for the capital city of the German state of *Baden-Württemberg*, *Stuttgart*. Note that, because of this, some of the data sources may be written in German. I will add short bits of informations where necessary for your convenience.
+This is a list of all the data and how I want to use it to solve my problem. For the example in this document I have chosen to use data for the capital city of the German state of *Baden-Württemberg*, *Stuttgart*. Note that, because of this, some of the data sources may be written in German. I will add short bits of information where necessary for your convenience.
 
 ##### Foursquare Places API:
 [Foursquare API](https://foursquare.com/) - This has been discussed previously in the course, therefore I will not go further into details here.
 
-Important from this dataset will be data on **geo location**, **venue names**, **venue types**, **popularity** and **adresses**.
+Important from this dataset will be data on **Geo location**, **venue names**, **venue types**, **popularity** and **addresses**.
 
 
 ##### VVS list of stops:
  [VVS list of stops](https://www.openvvs.de/dataset/haltestellen/resource/d87d1f01-5c14-4d08-8452-e405a6472ab4) - A list of all stops in the VVS (Verkehrsverbund Stuttgart; responsible for public transport in the region of Stuttgart) with additional data such as geographic position.  
-Relevant data from this dataset are **geo location data**, **transport type** and other data relevant to specifics of public transport.  
+Relevant data from this dataset are **Geo location data**, **transport type** and other data relevant to specifics of public transport.  
 **License:** This dataset is licensed under the **Creative Commons Attribution License** ( [see here](http://opendefinition.org/licenses/cc-by/) ) and may be used under the condition that the creator is appropriately credited, which is hereby done.
 
 
