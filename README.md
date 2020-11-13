@@ -38,11 +38,8 @@ Important from this dataset will be data on **geo location**, **venue names**, *
 
 ##### VVS list of stops:
  [VVS list of stops](https://www.openvvs.de/dataset/haltestellen/resource/d87d1f01-5c14-4d08-8452-e405a6472ab4) - A list of all stops in the VVS (Verkehrsverbund Stuttgart; responsible for public transport in the region of Stuttgart) with additional data such as geographic position.  
-
 Relevant data from this dataset are **geo location data**, **transport type** and other data relevant to specifics of public transport.
-
-**License:**  
-This dataset is licensed under the **Creative Commons Attribution License** ( [see here](http://opendefinition.org/licenses/cc-by/) ) and may be used under the condition that the creator is appropriately credited, which is hereby done.
+**License:** This dataset is licensed under the **Creative Commons Attribution License** ( [see here](http://opendefinition.org/licenses/cc-by/) ) and may be used under the condition that the creator is appropriately credited, which is hereby done.
 
 
 
