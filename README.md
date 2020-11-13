@@ -33,7 +33,7 @@ This is a list of all the data and how I want to use it to solve my problem. For
 ##### Foursquare Places API:
 [Foursquare API](https://foursquare.com/) - This has been discussed previously in the course, therefore I will not go further into details here.
 
-Important from this dataset will be data on **geo location**, **venue names**, ** venue types**, **popularity** and **adresses**.
+Important from this dataset will be data on **geo location**, **venue names**, **venue types**, **popularity** and **adresses**.
 
 
 ##### VVS list of stops:
