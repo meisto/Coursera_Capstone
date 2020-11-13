@@ -28,7 +28,7 @@ For this business problem I will make some assumptions: First, I am gonna assume
 This business model can be summarized as following: I will try to build clusters of venues centered on reachable train stations, find similar clusters and return for each type of cluster the most prominsing candidates.
 
 ## 4. Data Sources
-This is a list of all the data and how I want to use it to solve my problem. For the example in this document I have choosen to use data for the capital city of the German state of *Baden-Würrtemberg*, *Stuttgart*. Note that, because of this, some of the data sources may be written in German. I will add short bits of informations where necessary for your convenience.
+This is a list of all the data and how I want to use it to solve my problem. For the example in this document I have choosen to use data for the capital city of the German state of *Baden-Württemberg*, *Stuttgart*. Note that, because of this, some of the data sources may be written in German. I will add short bits of informations where necessary for your convenience.
 
 ##### Foursquare Places API:
 [Foursquare API](https://foursquare.com/) - This has been discussed previously in the course, therefore I will not go further into details here.
