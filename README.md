@@ -54,11 +54,27 @@ be easibly possible to change this behaviour by altering the url in the preproce
 After querying the API for answers I collected the data in a dataframe containing the venue name, address, latitude, longitude, categories as well as the name of the train station nearest to it. This was then written to a csv file.  
 
 ### 5.2. Exploratory Data Analysis
-After loading the data from the files generated in the preprocessing step and rectifying wrongly detected data types I started by visualizing the data in a map.
-### 5.3. 
+#### Physical Spread
+After loading the data from the files generated in the preprocessing step and rectifying wrongly detected data types I started by visualizing the data in a map.  
+Note to self: Add picture here.  
+This shows that most venues lie somewhat close to their train station, some being within 100 meters, some even further. There are however some outliers, especially in north-western and south-eastern directions. This could be because of data sparcity (no closer candidates where found) or simply a quirk of foursquare. I can not really explain this, because all the outliers lie in pretty big cities so there should better candidates available. In all likelihood this is either a fault in
+the data or a quirk of the API.  
+
+#### Categories
+After analyzing the physical spread, I will now come to the categories. For this I aggregated all venues in groups according to their associated train station and converted this in categorical values which I used to train a clustering algorithm. Testing revealed that the number three is well suited as the number of clusters for KMeans-clustering. We will come back to this later.  
+First I determined the overall distribution of categories. The results will be discussed later.
+After calculating the distribution over the complete datasets, I calculated the same distribution over the different clusters. This produced some interesting characteristicas.  
+This concludes the section about exploratory data analysis.
+
+### 5.3. Using this data
+The data that has been produced in the previous section can be used to recommend stations to a user both when he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station returning to that cluster or even a specific venue. Please see my notebook for an example.
 
 ## 6. Results 
+TODO: Insert three graphics and discussion
+as well as the results.
 ## 7. Discussion
+TODO: Bias because of nearness to train stations
+
 While the results presented in the previous 
 ## 8. Conclussion
 This concludes my report. Thank you for reading until here. I spent much time and thought in this project and hope you enjoyed reading it. 
