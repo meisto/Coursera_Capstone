@@ -13,7 +13,6 @@ The sections of this document, with which I want to solve that task, are structu
 2. Description of the business problem I will tackle and a discussion of the background.
 3. A list of all the data sources I want to use and how it will enable me to solve the problem.
 5. Methodology
-<p align="center"> You can find the notebooks, relating to this project in this GitHub account. There are two notebooks, one [containing the preprocessing of the data](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project_Preprocessing.ipynb) and the other [containing the main components](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project.ipynb).</p>
 6. Results.
 
 **Note:**
@@ -44,6 +43,7 @@ Relevant data from this dataset are **Geo location data**, **transport type** an
 
 <a name="jump_point_week_6"></a>
 ## 5. Methodology
+> You can find the notebooks, relating to this project in this GitHub account. There are two notebooks, one [containing the preprocessing of the data](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project_Preprocessing.ipynb) and the other [containing the main components](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project.ipynb).
 
 
 ## 6. Results
