@@ -65,8 +65,13 @@ After analyzing the physical spread, I will now come to the categories. For this
 First I determined the overall distribution of categories. The results will be discussed later.
 After calculating the distribution over the complete datasets, I calculated the same distribution over the different clusters. This produced some interesting characteristicas.  
 This concludes the section about exploratory data analysis.
+### 5.3. Machine Learning Models
+As previously mentioned I used the K-Means algorithm for clustering and the *elbow*-method to determine the number of clusters.  
+ K-Means, has several advantages, such as simplicity, ease of use and speed while still being quite powerful. As I do not need any cluster hierarchys for this project (there are too few clusters to be usefull) using hierarchical clustering was not necessary.  
+That said, in a more compley dataset with more venues and clusters it might be very interesting to observe the relationships and groupings of cluster and therefore using hierarchical clustering might prove insightful.  
 
-### 5.3. Using this data
+I thought about using linear regression with the clusters as target to determine the relative importance of the different compontents, but the relative sparsity of the training data and the existence of other methods, such as the ones I used, made this unnecessary.
+### 5.4. Using this data
 The data that has been produced in the previous section can be used to recommend stations to a user both when he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station returning to that cluster or even a specific venue. Please see my notebook for an example.
 
 ## 6. Results 
