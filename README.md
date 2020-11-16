@@ -13,6 +13,7 @@ The sections of this document, with which I want to solve that task, are structu
 2. Description of the business problem I will tackle and a discussion of the background.
 3. A list of all the data sources I want to use and how it will enable me to solve the problem.
 5. Methodology
+<p align="center"> You can find the notebooks, relating to this project in this GitHub account. There are two notebooks, one [containing the preprocessing of the data](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project_Preprocessing.ipynb) and the other [containing the main components](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project.ipynb).</p>
 6. Results.
 
 **Note:**
@@ -41,15 +42,11 @@ Important from this dataset will be data on **Geo location**, **venue names**, *
 Relevant data from this dataset are **Geo location data**, **transport type** and other data relevant to specifics of public transport.  
 **License:** This dataset is licensed under the **Creative Commons Attribution License** ( [see here](http://opendefinition.org/licenses/cc-by/) ) and may be used under the condition that the creator is appropriately credited, which is hereby done.
 
-
-
-
-## Note: The following text is part of next weeks assignment, so please do not pay it any mind.
-
 <a name="jump_point_week_6"></a>
-## Data Refinement and Analysis: 
--
-## Report:
+## 5. Methodology
+
+
+## 6. Results
 -
 <!---
 As given in the review criteria, this report will consist of the following components:
