@@ -44,10 +44,26 @@ Relevant data from this dataset are **Geo location data**, **transport type** an
 <a name="jump_point_week_6"></a>
 ## 5. Methodology
 > You can find the notebooks, relating to this project in this GitHub account. There are two notebooks, one [containing the preprocessing of the data](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project_Preprocessing.ipynb) and the other [containing the main components](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project.ipynb).
+### 5.1. Preprocessing
+To start of the preprocessing, I loaded the *VVS* dataset from the internet using pandas. Problem occured for tihs as the data was not encoded in the standard UTF-8 encoding but instead in a encoding called iso-8859-1 which led to problems and weird strings when working with the dataframe. 
+After rectifying this problem I also had to filter the field "Verkehrsmittel" (mode of transport). The original dataset contained not only the data for the "S-Bahn" (regional train) but also data for other modes of transport such as bus or taxi. These were encapsulated in a single field as values seperated by ";". To remove irelevant data I used regular expressions.  
+After dropping irelevant columns, mostly different identifiers and other data used for administration, I only had to translate the column names in english and I was done with the train station data and could write it to a csv file (in UTF-8 encoding).  
 
+After this I used the now cleaned name, latitude and longitude fields in the train station dataset to query foursquare for locations using the search API. I decided to use the search API instead of the explore API because I wanted to not only include exciting venues (such as bars, restaurants, etc.) but also more mundane venues (such as gas stations, supermarkets, etc.) which, in tests, where not often included in responses contained using the explore API. It should however
+be easibly possible to change this behaviour by altering the url in the preprocessing notebook. I restricted the amount of venues to 10 per request and the maximum radius around the location to 500 meters, mostly due to resource constraints.  
+After querying the API for answers I collected the data in a dataframe containing the venue name, address, latitude, longitude, categories as well as the name of the train station nearest to it. This was then written to a csv file.  
 
-## 6. Results
--
+### 5.2. Exploratory Data Analysis
+After loading the data from the files generated in the preprocessing step and rectifying wrongly detected data types I started by visualizing the data in a map.
+### 5.3. 
+
+## 6. Results 
+## 7. Discussion
+While the results presented in the previous 
+## 8. Conclussion
+This concludes my report. Thank you for reading until here. I spent much time and thought in this project and hope you enjoyed reading it. 
+I think this is one of the very many interesting use cases for data science and its methodology.  
+Have a nice day!
 <!---
 As given in the review criteria, this report will consist of the following components:
 1. An introduction to the problem and who could be interested in such a project.
