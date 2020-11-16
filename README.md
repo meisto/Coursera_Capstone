@@ -56,9 +56,11 @@ After querying the API for answers I collected the data in a dataframe containin
 ### 5.2. Exploratory Data Analysis
 #### Physical Spread
 After loading the data from the files generated in the preprocessing step and rectifying wrongly detected data types I started by visualizing the data in a map.  
-Note to self: Add picture here.  
-![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_base_close.png)
+
+To get an interactive map you can pull this repository and execute it on your own machine.
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_base_far.png)
+Close up of the center:
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_base_close.png)
 This shows that most venues lie somewhat close to their train station, some being within 100 meters, some even further. There are however some outliers, especially in north-western and south-eastern directions. This could be because of data sparsity (no closer candidates where found) or simply a quirk of foursquare. I can not really explain this, because all the outliers lie in pretty big cities so there should better candidates available. In all likelihood this is either a fault in
 the data or a quirk of the API.  
 
@@ -79,6 +81,11 @@ The data that has been produced in the previous section can be used to recommend
 ## 6. Results 
 TODO: Insert three graphics and discussion
 as well as the results.
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_overall.png)
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_1.png)
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)
+
 ## 7. Discussion
 TODO: Bias because of nearness to train stations
 
