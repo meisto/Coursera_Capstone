@@ -1,0 +1,85 @@
+name,place,district,type of transport,lines,longitude,latitude
+Nürnberger Straße,Stuttgart,Stuttgart,S-Bahn;R-Bahn;Nachtbus;Stadtbahn,"S2,S3,R2,R3,U1,N6",9.234576905,48.80656049
+Leinfelden,Leinfeld.-Echterd.,Leinfelden,Bus;S-Bahn;Stadtbahn,"S2,S3,S6,U5,35,38,E,82,86,826,826A",9.142859698,48.69641917
+Höfingen,Leonberg,Höfingen,S-Bahn,"S6,S60",9.026180834,48.81503423
+Sommerrain,Stuttgart,Stuttgart,Bus;R-Bahn;S-Bahn,"S2,S3,R2,R3,54,58",9.24834265,48.81524515
+Malmsheim,Renningen,Malmsheim,S-Bahn,S6,8.905105557,48.77183551
+Rutesheim,Rutesheim,Rutesheim,S-Bahn;Bus,"S6,S60,655,655A",8.960216401,48.7902658
+Weil der Stadt,Weil der Stadt,Weil der Stadt,Ruftaxi;Bus;S-Bahn,"S6,663,665,666,670,749,766,RT663,RT670,RT766,670.2,880",8.872578249,48.75526729
+Bietigheim,Bietigheim-Bissingen,Bietigheim,R-Bahn;Bus;Nachtbus;S-Bahn,"S5,R4,R5,540,542,544,551,552,553,554,555,556,557,558,559,561,564,566,567,567A,572,N56,N57,N58",9.137599707,48.94796727
+Kornwestheim,Kornwestheim,Kornwestheim,S-Bahn;Ruftaxi;R-Bahn;Bus,"S4,S5,R4,R5,R11,411,412,413,414,RT41",9.179816585,48.86194377
+Neuwirtsh. (Porschep.),Stuttgart,Stuttgart,S-Bahn,"S6,S60",9.151941993,48.83384723
+Benningen (N),Benningen (N),Benningen (N),S-Bahn,S4,9.244285336,48.94377964
+Freiberg (N),Freiberg (N),Freiberg (N),Bus;S-Bahn;Nachtbus,"S4,444,444A,446,446A,459,564,N44",9.197530085,48.92994961
+Nellmersbach,Leutenbach,Nellmersbach,S-Bahn;R-Bahn,"S3,R3",9.415421538,48.90336412
+Neustadt-Hohenacker,Waiblingen,Neustadt,Bus;S-Bahn;R-Bahn;Ruftaxi,"S3,R3,201,RT201",9.324578549,48.85925244
+Schwaikheim,Schwaikheim,Schwaikheim,R-Bahn;Bus;S-Bahn,"S3,R3,210",9.354747549,48.86835349
+Stetten-Beinstein,Weinstadt,Endersbach,R-Bahn;S-Bahn;Bus,"S2,R2,116",9.352401867,48.81196103
+Geradstetten,Remshalden,Geradstetten,S-Bahn;R-Bahn,"S2,R2",9.43952211,48.80524978
+Grunbach,Remshalden,Grunbach,R-Bahn;Ruftaxi;Bus;S-Bahn,"S2,R2,217,217a,310,RT217",9.418981937,48.81046101
+Weiler (R),Schorndorf,Weiler (R),S-Bahn;R-Bahn,"S2,R2",9.501918036,48.80030963
+Winterbach,Winterbach,Winterbach,R-Bahn;S-Bahn,"S2,R2",9.481549751,48.79842729
+Altbach,Altbach,Altbach,R-Bahn;S-Bahn,"S1,S11,R1,R8",9.382434033,48.7203134
+Mettingen,Esslingen (N),Mettingen,R-Bahn;Bus;S-Bahn,"S1,S11,R1,R8,101,102,115",9.275772502,48.74709237
+Oberesslingen,Esslingen (N),Oberesslingen,R-Bahn;S-Bahn;Bus,"S1,S11,R1,R8,138",9.327277435,48.72983572
+Zell,Esslingen (N),Zell (Essl.),Bus;R-Bahn;S-Bahn,"S1,S11,R1,R8,102,103,115,138,140",9.359439727,48.72425431
+Filderstadt,Filderstadt,Bernhausen,S-Bahn,S2,9.217581315,48.67649138
+Flughafen/Messe,Leinfeld.-Echterd.,Echterdingen,S-Bahn;Expressbus;Bus,"S2,S3,S6,122,806,828,X10,X60,X3",9.192635754,48.69033045
+Oberaichen,Leinfeld.-Echterd.,Leinfelden,Nachtbus;S-Bahn;Bus,"S2,S3,S6,38,E,N76",9.127409558,48.70516009
+Weilimdorf Bf,Stuttgart,Stuttgart,Bus;S-Bahn,"S6,S60,90",9.094370086,48.82208416
+Süd,Renningen,Renningen,S-Bahn;Bus,"S60,636",8.931946041,48.76248428
+Magstadt,Magstadt,Magstadt,Bus;S-Bahn,"S60,745",8.965288562,48.7361512
+Nord,Sindelfingen,Maichingen,Bus;Nachtbus;S-Bahn,"S60,715,716,745,N60",8.979416996,48.72750379
+Maichingen,Sindelfingen,Maichingen,Bus;S-Bahn,"S60,715,716,745,748,749",8.969715204,48.72200731
+Sindelfingen,Sindelfingen,Sindelfingen,Nachtbus;Bus;S-Bahn,"S60,705,766,N60",8.999262079,48.70387332
+Goldberg,Böblingen,Böblingen,Bus;S-Bahn;R-Bahn,"S1,S11,R7,704,706,708,709,722,734",9.019787705,48.6964707
+Erdmannhausen,Erdmannhausen,Erdmannhausen,S-Bahn,S4,9.299421571,48.94821741
+Beutelsbach,Weinstadt,Beutelsbach,S-Bahn;R-Bahn,"S2,R2",9.385679057,48.8103616
+Kirchheim (T),Kirchheim (T),Kirchheim (T),Ruftaxi;Bus;S-Bahn;Expressbus;R-Bahn,"S1,S11,R81,144,152,161,163,165,166,168,170,173,175,176,177,X10,RT144,RT161,RT163,RT165,RT166,RT173,RT175,RT176,RT177,RT178,RT17",9.443872422,48.64415968
+Wernau (N),Wernau (N),Wernau (N),Ruftaxi;R-Bahn;Bus;S-Bahn,"S1,S11,R8,R73,145,146,168,RT145,RT146",9.413762793,48.69413572
+Wendlingen (N),Wendlingen (N),Wendlingen (N),Bus;S-Bahn;R-Bahn;Nachtbus;Linientaxi;Expressbus,"S1,S11,R8,R73,151,152,154,155,184,196,N81,X10,LT151",9.373810586,48.67357165
+Ötlingen,Kirchheim (T),Ötlingen,S-Bahn;Ruftaxi;Bus,"S1,S11,161,163,165,RT161,RT163",9.416369073,48.65772444
+Herrenberg,Herrenberg,Herrenberg,Bus;Nachtbus;S-Bahn;Ruftaxi;R-Bahn;SEV-Bus,"S1,S11,R7,R74,R73,R7E,773,775,779,780,781,782,790,791,794,N70,N77,N80,RT773,RT774,RT780,RT782,RT790,RT794",8.862625253,48.59395683
+Ehningen,Ehningen,Ehningen,Bus;S-Bahn;R-Bahn,"S1,S11,R7,752,764",8.943930543,48.66250338
+Gärtringen,Gärtringen,Gärtringen,S-Bahn;R-Bahn;Bus;Ruftaxi;Nachtbus,"S1,S11,R7,753,759,N77,RT753",8.908891496,48.64087204
+Nufringen,Nufringen,Nufringen,S-Bahn;R-Bahn,"S1,S11,R7",8.890358982,48.62059565
+Rohr,Stuttgart,Stuttgart,Nachtbus;Bus;S-Bahn;R-Bahn,"S1,S2,S3,S6,S11,R7,81,N10",9.108429298,48.71775109
+Vaihingen,Stuttgart,Stuttgart,Bus;S-Bahn;Stadtbahn;R-Bahn,"S1,S2,S3,S6,S11,R7,U1,U3,U8,81,82,84,86",9.113913368,48.72698102
+Universität,Stuttgart,Stuttgart,Nachtbus;Bus;S-Bahn,"S1,S2,S3,S6,S11,82,84,91,92,746,747,748,N1",9.106352149,48.74437966
+Österfeld,Stuttgart,Stuttgart,S-Bahn,"S1,S2,S3,S6,S11",9.116751812,48.7376522
+Schwabstraße,Stuttgart,Stuttgart,S-Bahn;Bus;Nachtbus,"S1,S2,S3,S4,S5,S6,S11,S60,42,44,N2,N10",9.156496716,48.77013941
+Stadtmitte,Stuttgart,Stuttgart,S-Bahn;Bus;Stadtbahn;Nachtbus,"S1,S2,S3,S4,S5,S6,S11,S60,U2,U4,U14,U34,43,92,N2",9.173046906,48.7763294
+Neckarpark,Stuttgart,Stuttgart,S-Bahn,"S1,S11",9.241068636,48.79196148
+Untertürkheim,Stuttgart,Stuttgart,Stadtbahn;R-Bahn;Bus;S-Bahn;Nachtbus,"S1,S11,R1,R8,R11,U4,U13,60,61,N6,N7",9.250467074,48.77984666
+Obertürkheim,Stuttgart,Stuttgart,Bus;S-Bahn;R-Bahn;Nachtbus,"S1,S11,R1,R8,61,62,65,101,N7",9.268303035,48.76157884
+Hauptbahnhof (oben),Stuttgart,Stuttgart,R-Bahn;S-Bahn,"S1,S3,S4,S5,S6,S11,R1,R2,R3,R4,R5,R7,R8",9.182792477,48.78487504
+Hauptbahnhof (tief),Stuttgart,Stuttgart,S-Bahn,"S1,S2,S3,S4,S5,S6,S11,S60",9.17984637,48.7829823
+Feuerbach,Stuttgart,Stuttgart,S-Bahn;Bus;R-Bahn;Stadtbahn;Nachtbus,"S4,S5,S6,S60,R4,R5,U6,U13,91,401,501,502,503,N3",9.169241449,48.81384215
+Feuersee,Stuttgart,Stuttgart,Bus;S-Bahn;Nachtbus,"S1,S2,S3,S4,S5,S6,S11,S60,41,43,44,92,N2",9.166055212,48.7727068
+Nordbahnhof,Stuttgart,Stuttgart,S-Bahn;R-Bahn;Nachtbus;Stadtbahn,"S4,S5,S6,S60,R4,R5,U12,N5",9.187163931,48.80399473
+Bad Cannstatt,Stuttgart,Stuttgart,S-Bahn;Bus;R-Bahn,"S1,S2,S3,S11,R1,R2,R3,R8,45,56",9.217468636,48.80127965
+Zuffenhausen,Stuttgart,Stuttgart,Bus;R-Bahn;S-Bahn;Nachtbus,"S4,S5,S6,S60,R4,R5,52,99,401,402,508,N55",9.167156375,48.82960871
+Fellbach,Fellbach,Fellbach,R-Bahn;S-Bahn;Nachtbus;Bus;Ruftaxi,"S2,S3,R2,R3,60,67,211,212,N6,RT211",9.270604796,48.82023062
+Ditzingen,Ditzingen,Ditzingen,Bus;S-Bahn;Nachtbus,"S6,S60,98,535,620,623,623A,624,625,N65",9.067095186,48.82358713
+Echterdingen,Leinfeld.-Echterd.,Echterdingen,S-Bahn;Bus,"S2,S3,S6,35,36,38,E,76,77,828",9.169375059,48.69213864
+Böblingen,Böblingen,Böblingen,Nachtbus;Bus;Ruftaxi;S-Bahn;SEV-Bus;R-Bahn,"S1,S11,S60,R7,R72A,R72E,631,701,703,704,705,706,707,709,721,723,724,726,728,731,732,752,754,760,761,761A,763,766,N60,N73,N74,N75,MB1,RT754,RT760,RT763,RT766",9.004830672,48.68792051
+Hulb,Böblingen,Böblingen,S-Bahn;Bus;R-Bahn;SEV-Bus,"S1,S11,R7,R72A,707,728",8.983197564,48.67941257
+Leonberg,Leonberg,Leonberg,Bus;Nachtbus;Expressbus;S-Bahn;Ruftaxi,"S6,S60,92,94,631,632,633,634,635,651,652,653,653A,N62,X60,RT94,RT632,RT651,RT653",9.004053218,48.79972332
+Renningen,Renningen,Renningen,S-Bahn;Nachtbus;Bus,"S6,S60,636,N60",8.932527772,48.77510093
+Asperg,Asperg,Asperg,Bus;R-Bahn;S-Bahn,"S5,R4,R5,420,433,531,532,536A",9.147977466,48.90725595
+Ludwigsburg,Ludwigsburg,Ludwigsburg,Bus;Nachtbus;S-Bahn;R-Bahn,"S4,S5,R4,R5,413,420,421,421A,422,422A,423,424,425,425A,426,427,427A,429,430,431,432,433,433A,443,444,508,532,533,534,535,N41,N42,N43",9.185460784,48.89185192
+Favoritepark,Ludwigsburg,Eglosheim,S-Bahn,S4,9.180670094,48.90957414
+Tamm,Tamm,Tamm,R-Bahn;Bus;S-Bahn,"S5,R4,R5,536,536A,541,542",9.12516507,48.9218234
+Burgstall (M),Burgstetten,Burgstall (M),Bus;Nachtbus;S-Bahn,"S4,455,N30",9.36932436,48.92826767
+Kirchberg (M),Kirchberg (M),Kirchberg (M),Bus;S-Bahn;Nachtbus,"S4,455,488,N40",9.32890606,48.93922575
+Marbach (N),Marbach (N),Marbach (N),Bus;Nachtbus;Ruftaxi;S-Bahn;Bürgerbus,"S4,364,443,451,453,455,456,457,460,460A,461,462,464,N40,N46,BB,RT364,RT457",9.264611824,48.94377066
+Backnang,Backnang,Backnang,Bus;Ruftaxi;Nachtbus;S-Bahn;R-Bahn,"S3,S4,R3,335,360,361,362,363,364,365,366,367,367A,368,369,370,380,381,382,383,384,385,390,393,455,467,488,N30,RT361,RT363,RT381,RT390,RT35",9.426136644,48.94269271
+Maubach,Backnang,Maubach,Bus;R-Bahn;Ruftaxi;S-Bahn,"S3,R3,361,RT361,RT35",9.419758623,48.92607165
+Korntal,Korntal-Münchingen,Korntal,Bus;S-Bahn;R-Bahn,"S6,S60,R61,90,612",9.1211538,48.8264832
+Waiblingen,Waiblingen,Waiblingen,Bus;R-Bahn;Ruftaxi;Expressbus;Nachtbus;S-Bahn,"S2,S3,R2,R3,201,202,204,205,206,207,208,209,210,211,212,213,216,218,263,335,431,432,N31,X20,RT201,RT209,RT211",9.300449905,48.8262893
+Winnenden,Winnenden,Winnenden,Ruftaxi;Bus;S-Bahn;R-Bahn,"S3,R3,210,310,331,332,334,335,336,337,340,456,RT334,RT30,RT31",9.392210743,48.87959815
+Rommelshausen,Kernen i. R.,Rommelshausen,S-Bahn;R-Bahn;Nachtbus;Ruftaxi;Bus,"S2,R2,211,N31,RT211",9.319175884,48.81552004
+Schorndorf,Schorndorf,Schorndorf,S-Bahn;R-Bahn;Bus;Ruftaxi,"S2,R2,R21,106,149,217a,228,229,230,242,243,244,245,246,247,248,249,260,261,262,263,265,RT260,RT262",9.525647293,48.80711887
+Endersbach,Weinstadt,Endersbach,Bus;Ruftaxi;S-Bahn;R-Bahn,"S2,R2,116,201,202,204,206,209,263,RT202,RT206,RT209",9.370029236,48.8132006
+Esslingen (N),Esslingen (N),Esslingen (N),R-Bahn;S-Bahn,"S1,S11,R1,R8",9.300564768,48.73857736
+Plochingen,Plochingen,Plochingen,R-Bahn;Ruftaxi;Bus;S-Bahn,"S1,S11,R1,R8,R73,140,141,142,143,144,149,261,262,RT142,RT143,RT144,RT149,RT262",9.410520417,48.71298665
