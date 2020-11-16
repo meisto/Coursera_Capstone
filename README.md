@@ -45,32 +45,33 @@ Relevant data from this dataset are **Geo location data**, **transport type** an
 ## 5. Methodology
 > You can find the notebooks, relating to this project in this GitHub account. There are two notebooks, one [containing the preprocessing of the data](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project_Preprocessing.ipynb) and the other [containing the main components](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project.ipynb).
 ### 5.1. Preprocessing
-To start of the preprocessing, I loaded the *VVS* dataset from the internet using pandas. Problem occured for tihs as the data was not encoded in the standard UTF-8 encoding but instead in a encoding called iso-8859-1 which led to problems and weird strings when working with the dataframe. 
-After rectifying this problem I also had to filter the field "Verkehrsmittel" (mode of transport). The original dataset contained not only the data for the "S-Bahn" (regional train) but also data for other modes of transport such as bus or taxi. These were encapsulated in a single field as values seperated by ";". To remove irelevant data I used regular expressions.  
-After dropping irelevant columns, mostly different identifiers and other data used for administration, I only had to translate the column names in english and I was done with the train station data and could write it to a csv file (in UTF-8 encoding).  
+To start of the preprocessing, I loaded the *VVS* dataset from the internet using pandas. Problem occurred for this as the data was not encoded in the standard UTF-8 encoding but instead in a encoding called iso-8859-1 which led to problems and weird strings when working with the dataframe. 
+After rectifying this problem I also had to filter the field "Verkehrsmittel" (mode of transport). The original dataset contained not only the data for the "S-Bahn" (regional train) but also data for other modes of transport such as bus or taxi. These were encapsulated in a single field as values separated by ";". To remove irrelevant data I used regular expressions.  
+After dropping irrelevant columns, mostly different identifiers and other data used for administration, I only had to translate the column names in English and I was done with the train station data and could write it to a CSV file (in UTF-8 encoding).  
 
 After this I used the now cleaned name, latitude and longitude fields in the train station dataset to query foursquare for locations using the search API. I decided to use the search API instead of the explore API because I wanted to not only include exciting venues (such as bars, restaurants, etc.) but also more mundane venues (such as gas stations, supermarkets, etc.) which, in tests, where not often included in responses contained using the explore API. It should however
-be easibly possible to change this behaviour by altering the url in the preprocessing notebook. I restricted the amount of venues to 10 per request and the maximum radius around the location to 500 meters, mostly due to resource constraints.  
-After querying the API for answers I collected the data in a dataframe containing the venue name, address, latitude, longitude, categories as well as the name of the train station nearest to it. This was then written to a csv file.  
+be easily possible to change this behaviour by altering the URL in the preprocessing notebook. I restricted the amount of venues to 10 per request and the maximum radius around the location to 500 meters, mostly due to resource constraints.  
+After querying the API for answers I collected the data in a dataframe containing the venue name, address, latitude, longitude, categories as well as the name of the train station nearest to it. This was then written to a CSV file.  
 
 ### 5.2. Exploratory Data Analysis
 #### Physical Spread
 After loading the data from the files generated in the preprocessing step and rectifying wrongly detected data types I started by visualizing the data in a map.  
 Note to self: Add picture here.  
-This shows that most venues lie somewhat close to their train station, some being within 100 meters, some even further. There are however some outliers, especially in north-western and south-eastern directions. This could be because of data sparcity (no closer candidates where found) or simply a quirk of foursquare. I can not really explain this, because all the outliers lie in pretty big cities so there should better candidates available. In all likelihood this is either a fault in
+![You should see a picture here](
+This shows that most venues lie somewhat close to their train station, some being within 100 meters, some even further. There are however some outliers, especially in north-western and south-eastern directions. This could be because of data sparsity (no closer candidates where found) or simply a quirk of foursquare. I can not really explain this, because all the outliers lie in pretty big cities so there should better candidates available. In all likelihood this is either a fault in
 the data or a quirk of the API.  
 
 #### Categories
 After analyzing the physical spread, I will now come to the categories. For this I aggregated all venues in groups according to their associated train station and converted this in categorical values which I used to train a clustering algorithm. Testing revealed that the number three is well suited as the number of clusters for KMeans-clustering. We will come back to this later.  
 First I determined the overall distribution of categories. The results will be discussed later.
-After calculating the distribution over the complete datasets, I calculated the same distribution over the different clusters. This produced some interesting characteristicas.  
+After calculating the distribution over the complete datasets, I calculated the same distribution over the different clusters. This produced some interesting characteristics.  
 This concludes the section about exploratory data analysis.
 ### 5.3. Machine Learning Models
 As previously mentioned I used the K-Means algorithm for clustering and the *elbow*-method to determine the number of clusters.  
- K-Means, has several advantages, such as simplicity, ease of use and speed while still being quite powerful. As I do not need any cluster hierarchys for this project (there are too few clusters to be usefull) using hierarchical clustering was not necessary.  
-That said, in a more compley dataset with more venues and clusters it might be very interesting to observe the relationships and groupings of cluster and therefore using hierarchical clustering might prove insightful.  
+ K-Means, has several advantages, such as simplicity, ease of use and speed while still being quite powerful. As I do not need any cluster hierarchy for this project (there are too few clusters to be useful) using hierarchical clustering was not necessary.  
+That said, in a more complex dataset with more venues and clusters it might be very interesting to observe the relationships and groupings of cluster and therefore using hierarchical clustering might prove insightful.  
 
-I thought about using linear regression with the clusters as target to determine the relative importance of the different compontents, but the relative sparsity of the training data and the existence of other methods, such as the ones I used, made this unnecessary.
+I thought about using linear regression with the clusters as target to determine the relative importance of the different components, but the relative sparsity of the training data and the existence of other methods, such as the ones I used, made this unnecessary.
 ### 5.4. Using this data
 The data that has been produced in the previous section can be used to recommend stations to a user both when he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station returning to that cluster or even a specific venue. Please see my notebook for an example.
 
@@ -81,7 +82,7 @@ as well as the results.
 TODO: Bias because of nearness to train stations
 
 While the results presented in the previous 
-## 8. Conclussion
+## 8. Conclusion
 This concludes my report. Thank you for reading until here. I spent much time and thought in this project and hope you enjoyed reading it. 
 I think this is one of the very many interesting use cases for data science and its methodology.  
 Have a nice day!
