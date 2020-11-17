@@ -104,7 +104,11 @@ We could call this the work-cluster.
 
 **Third cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)  
+The third cluster seems to cotaing many categories related to traveling, such as gas stations, hotels, restaurants and metro station. Of the three, this is the one, in my opinion, that shows the most consistence in the types of categories it values.  
 We could call this the travel-cluster.
+
+### Physical Spread of Clusters:
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_cluster.png)  
 
 
 ## 7. Discussion
