@@ -79,24 +79,24 @@ In an early approach, using linear regression with the clusters as target to det
 The data and insights that were produced in the previous sections can be used to recommend stations to a user, both if he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station returning to that cluster or even a specific venue. Please see my notebook for an example on how one could go about doing this.
 
 ## 6. Results 
-> Note: The results presented here are the same that can be seen in the notebooks as they stem from a previous run. That said the data should be similar, but variables that depend on stochstic processes, such as the naming of the clusters, might differ.
+> Note: The results presented here are the same that can be seen in the notebooks as they stem from a previous run. That said the data should be similar, but variables that depend on stochastic processes, such as the naming of the clusters, might differ.
 ### Distribution of Categories
 At first let's look at the distribution of the 25 most often seen categories in the overall dataset.  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_overall.png)  
-We can see that the top venue category "Bakery" occurs more often than all other categories. The three following categories ("Hotel", "Gas Station" and "Office") occur in similar rates. All other categories after this occur in frequencies descrbed by a flat downwards slope.  
+We can see that the top venue category "Bakery" occurs more often than all other categories. The three following categories ("Hotel", "Gas Station" and "Office") occur in similar rates. All other categories after this occur in frequencies described by a flat downwards slope.  
 
 The group of categories most often seen in the top 25 could be described as providers of necessary services (such as bakeries and doctors offices). This group consists of at least six elements (Bakery, Gas Station, Supermarket, Doctor's Office and Banks). Among them being three of the top six categories.  
 Another group of often seen categories could be named Work-related venues such as hotels, offices and factories.  
-The third major group contains free time activities such as various restaurants, cafés, nightclubs and Athletics & Sports shops. The individual categories in this group rank typically lower than categories in other groups.  
+The third major group contains free time activities such as various restaurants, cafes, nightclubs and Athletics & Sports shops. The individual categories in this group rank typically lower than categories in other groups.  
 These group are in parts later reflected in the clusters. See more below.  
 
 Overall we can see that the venue categories most often seen near train stations are mostly consisting of necessary and work related categories while spare time categories are further away.
 ### Clusters
-The data analysis process yielded three clusters for this data. Most of these clusters are caracterized by one major category, which occurs very often, while the remaining categories occur less frequently. The distribution is typically best described by a exponential distribution.  
+The data analysis process yielded three clusters for this data. Most of these clusters are characterized by one major category, which occurs very often, while the remaining categories occur less frequently. The distribution is typically best described by a exponential distribution.  
 
 **First cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)  
-The first cluster is characterized by the occurence of many bakeries. The difference between the top and the second categorie is significant as the the top categorie occures almost thrice as much as the second.  
+The first cluster is characterized by the occurrence of many bakeries. The difference between the top and the second category is significant as the the top category occurs almost thrice as much as the second.  
 We could call this the bakery-cluster.  
 
 **Second cluster:**  
@@ -106,30 +106,27 @@ We could call this the work-cluster.
 
 **Third cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)  
-The third cluster seems to cotaing many categories related to traveling, such as gas stations, hotels, restaurants and metro station. Of the three, this is the one, in my opinion, that shows the most consistence in the types of categories it values.  
+The third cluster seems to contain many categories related to traveling, such as gas stations, hotels, restaurants and metro station. Of the three, this is the one, in my opinion, that shows the most consistence in the types of categories it values.  
 We could call this the travel-cluster.
 
 ### Physical Spread of Clusters:
 > Note: Sadly GitHub does not allow interactive maps and pictures are ill suited to present this data. So if you are interested, you can download the notebook and run it yourself.
 
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_cluster.png)  
-Legend: bakery-cluster is marked green, the work-cluster is marked yellow and theg travel-cluster is marked orange. The red circle is the users current position (for this project we will assume that to be the main station), circles with blue borders are train stations.  
+Legend: bakery-cluster is marked green, the work-cluster is marked yellow and the travel-cluster is marked orange. The red circle is the users current position (for this project we will assume that to be the main station), circles with blue borders are train stations.  
 
-We can see that the center region near the main station contains mainly bakery- and work-clusters, while many of the outpspreading arms contain a mix of all three clusters. Outside the center there are groups of work-clusters especially in the north-eastern and south-western direction.
+We can see that the center region near the main station contains mainly bakery- and work-clusters, while many of the outspreading arms contain a mix of all three clusters. Outside the center there are groups of work-clusters especially in the north-eastern and south-western direction.
 
 ### Making Data-driven decisions:
 We can use this data to make data-driven decisions. I chose not to write too much over it here, because I think this is more of an application example than a result but I will say a bit about my personal opinion.  
 
-In the notebook you can see that I simulated a users personal interests by some given values. I chose those values deliberatly with places in the city in mind because I wanted to have some intuition on how well this model works. I was surprised to find that almost all places I imagined actually showed up as a result. Obviously I can not prove this and you will have to trust me on this, but you could also modify the code for another city to see if it works fine for you as well.
+In the notebook you can see that I simulated a users personal interests by some given values. I chose those values deliberately with places in the city in mind because I wanted to have some intuition on how well this model works. I was surprised to find that almost all places I imagined actually showed up as a result. Obviously I can not prove this and you will have to trust me on this, but you could also modify the code for another city to see if it works fine for you as well.
 
 ## 7. Discussion
-There is some discussion to be had concerning implicit bias in this model. For one the limit to ten values per train station could impact the model negatively. For example there is a food stand or bakery in many train stations, which could explain the high number of bakerys in the dataset. The same is true for restaurants.  
+There is some discussion to be had concerning implicit bias in this model. For one the limit to ten values per train station could impact the model negatively. For example there is a food stand or bakery in many train stations, which could explain the high number of bakeries in the dataset. The same is true for restaurants.  
 Another problem with the data is that some of the train stations are represented as one or more venues and are filtered out during preprocessing, leaving that station with less associated venues.  
 Another possible source of improvement is introducing occasions for the user to choose a context, for example "work" or "food" which could produce more limited and therefore more meaningful clusters.
-TODO: Bias because of nearness to train stations
-There is some discussion to be had, concerning the results 
 
-While the results presented in the previous 
 ## 8. Conclusion
 This concludes my report. Thank you for reading until here. I spent much time and thought in this project and hope you enjoyed reading it. 
 I think this is one of the very many interesting use cases for data science and its methodology.  
