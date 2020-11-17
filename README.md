@@ -70,20 +70,36 @@ First I determined the overall distribution of categories. The results will be d
 After calculating the distribution over the complete datasets, I calculated the same distribution over the different clusters. This produced some interesting characteristics.  
 This concludes the section about exploratory data analysis.
 ### 5.3. Machine Learning Models
-As previously mentioned I used the K-Means algorithm for clustering and the *elbow*-method to determine the number of clusters.  
- K-Means, has several advantages, such as simplicity, ease of use and speed while still being quite powerful. As I do not need any cluster hierarchy for this project (there are too few clusters to be useful) using hierarchical clustering was not necessary.  
-That said, in a more complex dataset with more venues and clusters it might be very interesting to observe the relationships and groupings of cluster and therefore using hierarchical clustering might prove insightful.  
+As previously mentioned the K-Means algorithm was used for clustering and the *elbow*-method to determine the number of clusters.  
+ K-Means has several advantages such as simplicity, ease of use and speed while still being quite powerful. As any hierarchies between clusters were not relevant for this project (there are too few clusters for it to be useful) using hierarchical clustering was not necessary and K-Means is sufficient.  
+That said, in a more complex dataset with more diverse venues and clusters it might be very interesting to observe the relationships and groupings of clusters and using hierarchical clustering might prove insightful.  
 
-I thought about using linear regression with the clusters as target to determine the relative importance of the different components, but the relative sparsity of the training data and the existence of other methods, such as the ones I used, made this unnecessary.
+In an early approach, using linear regression with the clusters as target to determine the relative importance of different components was contemplated, but the relative sparsity of the training data and the existence of other methods, such as the ones that were actually used, made this unnecessary.
 ### 5.4. Using this data
-The data that has been produced in the previous section can be used to recommend stations to a user both when he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station returning to that cluster or even a specific venue. Please see my notebook for an example.
+The data and insights that were produced in the previous sections can be used to recommend stations to a user, both if he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station returning to that cluster or even a specific venue. Please see my notebook for an example on how one could go about doing this.
 
 ## 6. Results 
-TODO: Insert three graphics and discussion
-as well as the results.
+> Note: The results presented here are the same that can be seen in the notebooks as they stem from a previous run. That said the data should be similar, but variables that depend on stochstic processes, such as the naming of the clusters, might differ.
+### Distribution of Categories
+At first let's look at the distribution of the 25 most often seen categories in the overall dataset.
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_overall.png)
+We can see that the top venue category "Bakery" occurs more often than all other categories. The three following categories ("Hotel", "Gas Station" and "Office") occur in similar rates. All other categories after this occur in frequencies descrbed by a flat downwards slope.  
+The group of categories most often seen in the top 25 could be described as providers of necessary services (such as bakeries and doctors offices). This group consists of at least six elements (Bakery, Gas Station, Supermarket, Doctor's Office and Banks). Among them being three of the top six categories.  
+Another group of often seen categories could be named Work-related venues such as hotels, offices and factories.  
+The third major group contains free time activities such as various restaurants, cafés, nightclubs and Athletics & Sports shops. The individual categories in this group rank typically lower than categories in other groups.  
+
+Overall we can see that the venue categories most often seen near train stations are mostly consisting of necessary and work related categories while spare time categories are further away.
+### Clusters
+The data analysis process yielded three clusters for this data. Most of these clusters are caracterized by one major category, which occurs very often, while the remaining categories occur less frequently. The distribution is typically best described by a exponential distribution.  
+
+**First cluster:**
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)
+The first cluster is characterized by the occurence of many bakeries. The difference between the top and the second categorie is significant as the the top categorie occures almost thrice as much as the second.
+
+**Second cluster:**
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_1.png)
+
+**Third cluster:**
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)
 
 ## 7. Discussion
