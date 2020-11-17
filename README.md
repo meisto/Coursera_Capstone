@@ -92,15 +92,15 @@ Overall we can see that the venue categories most often seen near train stations
 ### Clusters
 The data analysis process yielded three clusters for this data. Most of these clusters are caracterized by one major category, which occurs very often, while the remaining categories occur less frequently. The distribution is typically best described by a exponential distribution.  
 
-**First cluster:**
-![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)
+**First cluster:**  
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)  
 The first cluster is characterized by the occurence of many bakeries. The difference between the top and the second categorie is significant as the the top categorie occures almost thrice as much as the second.
 
-**Second cluster:**
-![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_1.png)
+**Second cluster:**  
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_1.png)  
 
-**Third cluster:**
-![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)
+**Third cluster:**  
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)  
 
 ## 7. Discussion
 TODO: Bias because of nearness to train stations
