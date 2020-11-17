@@ -95,7 +95,7 @@ The data analysis process yielded three clusters for this data. Most of these cl
 **First cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)  
 The first cluster is characterized by the occurence of many bakeries. The difference between the top and the second categorie is significant as the the top categorie occures almost thrice as much as the second.  
-We could call this the baker-cluster.  
+We could call this the bakery-cluster.  
 
 **Second cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_1.png)  
@@ -108,7 +108,9 @@ The third cluster seems to cotaing many categories related to traveling, such as
 We could call this the travel-cluster.
 
 ### Physical Spread of Clusters:
+> Note: Sadly GitHub does not allow interactive maps and pictures are ill suited to present this data. So if you are interested, you can download the notebook and run it yourself.
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_cluster.png)  
+Legend: bakery-cluster is marked green, the work-cluster is marked yellow and theg travel-cluster is marked orange.
 
 
 ## 7. Discussion
@@ -119,6 +121,7 @@ While the results presented in the previous
 This concludes my report. Thank you for reading until here. I spent much time and thought in this project and hope you enjoyed reading it. 
 I think this is one of the very many interesting use cases for data science and its methodology.  
 Have a nice day!
+
 <!---
 As given in the review criteria, this report will consist of the following components:
 1. An introduction to the problem and who could be interested in such a project.
