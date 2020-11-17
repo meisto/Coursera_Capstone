@@ -45,58 +45,63 @@ Relevant data from this dataset are **Geo location data**, **transport type** an
 ## 5. Methodology
 > You can find the notebooks, relating to this project in this GitHub account. There are two notebooks, one [containing the preprocessing of the data](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project_Preprocessing.ipynb) and the other [containing the main components](https://github.com/meisto/Coursera_Capstone/blob/main/IBM_Data_Science_Capstone_Project.ipynb).
 ### 5.1. Preprocessing
-To start of the preprocessing, I loaded the *VVS* dataset from the internet using pandas. Problem occurred for this as the data was not encoded in the standard UTF-8 encoding but instead in a encoding called iso-8859-1 which led to problems and weird strings when working with the dataframe. 
-After rectifying this problem I also had to filter the field "Verkehrsmittel" (mode of transport). The original dataset contained not only the data for the "S-Bahn" (regional train) but also data for other modes of transport such as bus or taxi. These were encapsulated in a single field as values separated by ";". To remove irrelevant data I used regular expressions.  
-After dropping irrelevant columns, mostly different identifiers and other data used for administration, I only had to translate the column names in English and I was done with the train station data and could write it to a CSV file (in UTF-8 encoding).  
+To start off the preprocessing, the *VVS* dataset was loaded from the internet using pandas. Problem occurred for this as the data was not encoded in the standard UTF-8 encoding but instead in a encoding called iso-8859-1 which led to problems and weird strings when working with the dataframe. 
+After rectifying this problem the field "Verkehrsmittel" (mode of transport) had to be filtered. The original dataset contained not only the data for the "S-Bahn" (regional train) but also data for other modes of transport such as bus or taxi. These were encapsulated in a single field as values separated by ";". To remove irrelevant data regular expressions were used.  
+After dropping irrelevant columns, mostly different identifiers and other data used for administration, the column names had to be translated into English. This concluded work on the train station data and so it could be written into a CSV file (in UTF-8 encoding).  
 
-After this I used the now cleaned name, latitude and longitude fields in the train station dataset to query foursquare for locations using the search API. I decided to use the search API instead of the explore API because I wanted to not only include exciting venues (such as bars, restaurants, etc.) but also more mundane venues (such as gas stations, supermarkets, etc.) which, in tests, where not often included in responses contained using the explore API. It should however
-be easily possible to change this behaviour by altering the URL in the preprocessing notebook. I restricted the amount of venues to 10 per request and the maximum radius around the location to 500 meters, mostly due to resource constraints.  
-After querying the API for answers I collected the data in a dataframe containing the venue name, address, latitude, longitude, categories as well as the name of the train station nearest to it. This was then written to a CSV file.  
+After this the now cleaned name, latitude and longitude fields in the train station dataset were used to query foursquare for locations using the search API. Use the search API instead of the explore API because was decided upon, because it was hoped that it would include not only exciting venues (such as bars, restaurants, etc.) but also more mundane venues (such as gas stations, supermarkets, etc.) which, in tests, where not often included in responses contained using the explore API. It should however
+be easily possible to change this behaviour by altering the URL in the preprocessing notebook. The amount of venues were restricted to 10 per request and the maximum radius around the location was set to 500 meters, mostly due to resource constraints.  
+After querying the API for answers the data was collected in a dataframe containing the venue name, address, latitude, longitude, categories as well as the name of the train station nearest to it. This was then written to a CSV file.  
 
 ### 5.2. Exploratory Data Analysis
 #### Physical Spread
-After loading the data from the files generated in the preprocessing step and rectifying wrongly detected data types I started by visualizing the data in a map.  
 
-To get an interactive map you can pull this repository and execute it on your own machine.
+After loading the data from the files generated in the preprocessing step and rectifying wrongly detected data types the data was visualized in a map. This enabled initial insight as well as the knowledge that the datapoint were reasonable.
+
+> To get an interactive map you can pull this repository and execute it on your own machine.  
+
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_base_far.png)
 Close up of the center:
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_base_close.png)
-This shows that most venues lie somewhat close to their train station, some being within 100 meters, some even further. There are however some outliers, especially in north-western and south-eastern directions. This could be because of data sparsity (no closer candidates where found) or simply a quirk of foursquare. I can not really explain this, because all the outliers lie in pretty big cities so there should better candidates available. In all likelihood this is either a fault in
+This shows that most venues lie somewhat close to their train station, some being within 100 meters, some even further. There are however some outliers, especially in north-western and south-eastern directions. This could be because of data sparsity (no closer candidates where found) or simply a quirk of the foursquare API. I can not definitely explain this, because all the outliers lie in pretty big cities so there should better candidates available. In all likelihood this is either a fault in
 the data or a quirk of the API.  
 
 #### Categories
-After analyzing the physical spread, I will now come to the categories. For this I aggregated all venues in groups according to their associated train station and converted this in categorical values which I used to train a clustering algorithm. Testing revealed that the number three is well suited as the number of clusters for KMeans-clustering. We will come back to this later.  
-First I determined the overall distribution of categories. The results will be discussed later.
-After calculating the distribution over the complete datasets, I calculated the same distribution over the different clusters. This produced some interesting characteristics.  
-This concludes the section about exploratory data analysis.
+After analyzing the physical spread, we will now come to the categories. For this all venues were aggregated in groups according to their associated train station and converted in categorical values which were used to train a clustering algorithm. Testing revealed that the number three is well suited as the number of clusters for KMeans-clustering. We will come back to this later.  
+First the overall distribution of categories was determined. The results will be discussed in detail in the result section of this document.
+After calculating the distribution over the complete datasets, the same distribution was calculated over the different clusters. This produced some interesting characteristics.  
+That concludes the section about exploratory data analysis.
 ### 5.3. Machine Learning Models
 As previously mentioned the K-Means algorithm was used for clustering and the *elbow*-method to determine the number of clusters.  
- K-Means has several advantages such as simplicity, ease of use and speed while still being quite powerful. As any hierarchies between clusters were not relevant for this project (there are too few clusters for it to be useful) using hierarchical clustering was not necessary and K-Means is sufficient.  
+ K-Means has several advantages such as simplicity, ease of use and speed while still being quite powerful. As any hierarchical dependencies between clusters were not relevant for this project (there are too few clusters for it to be useful) using hierarchical clustering was not necessary and K-Means is sufficient.  
 That said, in a more complex dataset with more diverse venues and clusters it might be very interesting to observe the relationships and groupings of clusters and using hierarchical clustering might prove insightful.  
 
-In an early approach, using linear regression with the clusters as target to determine the relative importance of different components was contemplated, but the relative sparsity of the training data and the existence of other methods, such as the ones that were actually used, made this unnecessary.
+In an early approach, using linear regression with the clusters as targets to determine the relative importance of different components was contemplated, but the relative sparsity of the training data and the existence of other methods, such as the ones that were actually used, made this unnecessary.
+
 ### 5.4. Using this data
-The data and insights that were produced in the previous sections can be used to recommend stations to a user, both if he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station returning to that cluster or even a specific venue. Please see my notebook for an example on how one could go about doing this.
+The data and insights that were produced in the previous sections can be used to recommend stations to a user, both if he has specific wishes and if he just wants to browse. This can be done by using a list of user interests to match the most fitting cluster type and then returning a train station belonging to that cluster or even more specific a simple venue. Please see my notebook for an example on how one could go about doing this.
 
 ## 6. Results 
-> Note: The results presented here are the same that can be seen in the notebooks as they stem from a previous run. That said the data should be similar, but variables that depend on stochastic processes, such as the naming of the clusters, might differ.
-### Distribution of Categories
-At first let's look at the distribution of the 25 most often seen categories in the overall dataset.  
-![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_overall.png)  
-We can see that the top venue category "Bakery" occurs more often than all other categories. The three following categories ("Hotel", "Gas Station" and "Office") occur in similar rates. All other categories after this occur in frequencies described by a flat downwards slope.  
+> Note: The exact values in the results presented here are not exactly the same as the ones that can be seen in the notebooks as they stem from a previous run (with the same code). That said the data should be similar, but variables that depend on stochastic processes, such as the naming of the clusters, might differ.
 
-The group of categories most often seen in the top 25 could be described as providers of necessary services (such as bakeries and doctors offices). This group consists of at least six elements (Bakery, Gas Station, Supermarket, Doctor's Office and Banks). Among them being three of the top six categories.  
+### Distribution of Categories
+At first let's look at the distribution of the 25 most often seen categories in the whole dataset.  
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_overall.png)  
+We can see that the top venue category "Bakery" occurs more often than all other categories. The three following categories ("Hotel", "Gas Station" and "Office") occur in similar rates. All other categories after this occur in frequencies described approximately by a flat downwards slope.  
+
+The biggest group of categories most seen in the top 25 could be described as providers of necessary services (such as bakeries and doctors offices). This group consists of at least six elements (Bakery, Gas Station, Supermarket, Doctor's Office and Banks). Among them being three of the top six categories.    
 Another group of often seen categories could be named Work-related venues such as hotels, offices and factories.  
 The third major group contains free time activities such as various restaurants, cafes, nightclubs and Athletics & Sports shops. The individual categories in this group rank typically lower than categories in other groups.  
-These group are in parts later reflected in the clusters. See more below.  
+These group are in parts later reflected in the clusters (but not exactly). See below for more.  
 
-Overall we can see that the venue categories most often seen near train stations are mostly consisting of necessary and work related categories while spare time categories are further away.
+Overall we can see that the venue categories most often seen near train stations are consisting mostly of necessary and work related categories while spare time categories are generally located in further distance from the train station.
+
 ### Clusters
 The data analysis process yielded three clusters for this data. Most of these clusters are characterized by one major category, which occurs very often, while the remaining categories occur less frequently. The distribution is typically best described by a exponential distribution.  
 
 **First cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)  
-The first cluster is characterized by the occurrence of many bakeries. The difference between the top and the second category is significant as the the top category occurs almost thrice as much as the second.  
+The first cluster is characterized by the occurrence of many bakeries. The difference between the top category and the second-from-top category is significant as the the top category occurs almost thrice as much as the second.  
 We could call this the bakery-cluster.  
 
 **Second cluster:**  
@@ -106,21 +111,21 @@ We could call this the work-cluster.
 
 **Third cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)  
-The third cluster seems to contain many categories related to traveling, such as gas stations, hotels, restaurants and metro station. Of the three, this is the one, in my opinion, that shows the most consistence in the types of categories it values.  
+The third cluster seems to contain many categories related to traveling, such as gas stations, hotels, restaurants and metro station. Of the three, this is the one, in my opinion, that shows the most consistence in the types of categories it contains.  
 We could call this the travel-cluster.
 
 ### Physical Spread of Clusters:
-> Note: Sadly GitHub does not allow interactive maps and pictures are ill suited to present this data. So if you are interested, you can download the notebook and run it yourself.
+> Note: Sadly GitHub does not allow interactive maps and pictures are ill suited to present this data. So if you are interested, you can download the notebook and run it yourself. This enables much better insight.
 
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_cluster.png)  
 Legend: bakery-cluster is marked green, the work-cluster is marked yellow and the travel-cluster is marked orange. The red circle is the users current position (for this project we will assume that to be the main station), circles with blue borders are train stations.  
 
-We can see that the center region near the main station contains mainly bakery- and work-clusters, while many of the outspreading arms contain a mix of all three clusters. Outside the center there are groups of work-clusters especially in the north-eastern and south-western direction.
+We can see that the center region near the main station contains mainly bakery- and work-clusters, while many of the outspreading arms contain a mix of all three clusters. Outside the center there are significant groups of work-clusters especially in the north-eastern and south-western direction.
 
 ### Making Data-driven decisions:
 We can use this data to make data-driven decisions. I chose not to write too much over it here, because I think this is more of an application example than a result but I will say a bit about my personal opinion.  
 
-In the notebook you can see that I simulated a users personal interests by some given values. I chose those values deliberately with places in the city in mind because I wanted to have some intuition on how well this model works. I was surprised to find that almost all places I imagined actually showed up as a result. Obviously I can not prove this and you will have to trust me on this, but you could also modify the code for another city to see if it works fine for you as well.
+In the notebook you can see that I simulated a users personal interests by some given strings representing interests. I chose those values deliberately with places in the city in mind because I wanted to have some intuition on how well this model works. I was surprised to find that almost all places I imagined actually showed up as a result. Obviously I can not prove this and you will have to trust me on this, but you could also modify the code for another city to see if it works fine for you as well.
 
 ## 7. Discussion
 There is some discussion to be had concerning implicit bias in this model. For one the limit to ten values per train station could impact the model negatively. For example there is a food stand or bakery in many train stations, which could explain the high number of bakeries in the dataset. The same is true for restaurants.  
@@ -130,7 +135,7 @@ Another possible source of improvement is introducing occasions for the user to 
 ## 8. Conclusion
 This concludes my report. Thank you for reading until here. I spent much time and thought in this project and hope you enjoyed reading it. 
 I think this is one of the very many interesting use cases for data science and its methodology.  
-Have a nice day!
+Have a nice day.
 
 <!---
 As given in the review criteria, this report will consist of the following components:
