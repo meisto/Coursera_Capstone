@@ -113,12 +113,21 @@ We could call this the travel-cluster.
 > Note: Sadly GitHub does not allow interactive maps and pictures are ill suited to present this data. So if you are interested, you can download the notebook and run it yourself.
 
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_cluster.png)  
-Legend: bakery-cluster is marked green, the work-cluster is marked yellow and theg travel-cluster is marked orange. The red circle is the users current position (assumed to be main station), circles with blue borders are train stations.  
+Legend: bakery-cluster is marked green, the work-cluster is marked yellow and theg travel-cluster is marked orange. The red circle is the users current position (for this project we will assume that to be the main station), circles with blue borders are train stations.  
 
 We can see that the center region near the main station contains mainly bakery- and work-clusters, while many of the outpspreading arms contain a mix of all three clusters. Outside the center there are groups of work-clusters especially in the north-eastern and south-western direction.
 
+### Making Data-driven decisions:
+We can use this data to make data-driven decisions. I chose not to write too much over it here, because I think this is more of an application example than a result but I will say a bit about my personal opinion.  
+
+In the notebook you can see that I simulated a users personal interests by some given values. I chose those values deliberatly with places in the city in mind because I wanted to have some intuition on how well this model works. I was surprised to find that almost all places I imagined actually showed up as a result. Obviously I can not prove this and you will have to trust me on this, but you could also modify the code for another city to see if it works fine for you as well.
+
 ## 7. Discussion
+There is some discussion to be had concerning implicit bias in this model. For one the limit to ten values per train station could impact the model negatively. For example there is a food stand or bakery in many train stations, which could explain the high number of bakerys in the dataset. The same is true for restaurants.  
+Another problem with the data is that some of the train stations are represented as one or more venues and are filtered out during preprocessing, leaving that station with less associated venues.  
+Another possible source of improvement is introducing occasions for the user to choose a context, for example "work" or "food" which could produce more limited and therefore more meaningful clusters.
 TODO: Bias because of nearness to train stations
+There is some discussion to be had, concerning the results 
 
 While the results presented in the previous 
 ## 8. Conclusion
