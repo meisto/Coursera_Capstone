@@ -94,13 +94,18 @@ The data analysis process yielded three clusters for this data. Most of these cl
 
 **First cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_0.png)  
-The first cluster is characterized by the occurence of many bakeries. The difference between the top and the second categorie is significant as the the top categorie occures almost thrice as much as the second.
+The first cluster is characterized by the occurence of many bakeries. The difference between the top and the second categorie is significant as the the top categorie occures almost thrice as much as the second.  
+We could call this the baker-cluster.  
 
 **Second cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_1.png)  
+The second cluster is the most balanced one of the three. It is dominated by the office category and contains several other work-related categories such as factory and maybe parking.  
+We could call this the work-cluster.  
 
 **Third cluster:**  
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_2.png)  
+We could call this the travel-cluster.
+
 
 ## 7. Discussion
 TODO: Bias because of nearness to train stations
