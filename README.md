@@ -109,6 +109,7 @@ We could call this the travel-cluster.
 
 ### Physical Spread of Clusters:
 > Note: Sadly GitHub does not allow interactive maps and pictures are ill suited to present this data. So if you are interested, you can download the notebook and run it yourself.
+
 ![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/spread_cluster.png)  
 Legend: bakery-cluster is marked green, the work-cluster is marked yellow and theg travel-cluster is marked orange.
 
