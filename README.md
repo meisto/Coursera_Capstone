@@ -81,12 +81,14 @@ The data and insights that were produced in the previous sections can be used to
 ## 6. Results 
 > Note: The results presented here are the same that can be seen in the notebooks as they stem from a previous run. That said the data should be similar, but variables that depend on stochstic processes, such as the naming of the clusters, might differ.
 ### Distribution of Categories
-At first let's look at the distribution of the 25 most often seen categories in the overall dataset.
-![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_overall.png)
+At first let's look at the distribution of the 25 most often seen categories in the overall dataset.  
+![You should see a picture here](https://github.com/meisto/Coursera_Capstone/blob/main/images/dist_overall.png)  
 We can see that the top venue category "Bakery" occurs more often than all other categories. The three following categories ("Hotel", "Gas Station" and "Office") occur in similar rates. All other categories after this occur in frequencies descrbed by a flat downwards slope.  
+
 The group of categories most often seen in the top 25 could be described as providers of necessary services (such as bakeries and doctors offices). This group consists of at least six elements (Bakery, Gas Station, Supermarket, Doctor's Office and Banks). Among them being three of the top six categories.  
 Another group of often seen categories could be named Work-related venues such as hotels, offices and factories.  
 The third major group contains free time activities such as various restaurants, cafés, nightclubs and Athletics & Sports shops. The individual categories in this group rank typically lower than categories in other groups.  
+These group are in parts later reflected in the clusters. See more below.  
 
 Overall we can see that the venue categories most often seen near train stations are mostly consisting of necessary and work related categories while spare time categories are further away.
 ### Clusters
